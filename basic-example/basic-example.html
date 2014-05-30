@@ -1,0 +1,25 @@
+<head>
+  <title>basic-example</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <div class="container if-container">
+    {{#transition}}
+      {{#if foo}}
+        <div class="content">Content!</div>
+      {{/if}}
+    {{/transition}}
+  </div>
+  
+  <div class="container each-container">
+    {{#transition}}
+      {{#each items}}
+        <div class="content">Content!</div>
+      {{/each}}
+    {{/transition}}
+  </div>
+</template>
